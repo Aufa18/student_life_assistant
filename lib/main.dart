@@ -1,28 +1,23 @@
 import 'package:flutter/material.dart';
+import 'screens/home_screen.dart';
 
 void main() {
-  runApp(const StudentLifeApp());
+  runApp(const StudentLifeAssistantApp());
 }
 
-class StudentLifeApp extends StatelessWidget {
-  const StudentLifeApp({super.key});
+class StudentLifeAssistantApp extends StatelessWidget {
+  const StudentLifeAssistantApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
       title: 'Student Life Assistant',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Student Life Assistant'),
-        ),
-        body: const Center(
-          child: Text(
-            'Selamat datang di '
-            'Student Life Assistant!',
-          ),
-        ),
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo),
+        useMaterial3: true,
       ),
+      home: const HomeScreen(),
     );
   }
 }

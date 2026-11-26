@@ -1,32 +1,62 @@
 import '../models/schedule_item.dart';
 import '../models/task_item.dart';
 
-const sampleTasks = <TaskItem>[
+const List<TaskItem> sampleTasks = [
   TaskItem(
-    title: 'Refactor dashboard',
+    id: 'T01',
+    title: 'Implementasi Responsive UI & Navigator',
     course: 'Mobile Programming',
-    deadline: 'Jumat, 20.00',
-    description: 'Ubah dashboard agar usable pada ruang compact dan wide.',
+    deadline: 'Besok, 23:59 WIB',
+    priority: 'Tinggi',
+    description:
+        'Mengubah dashboard satu layar menjadi multi-screen dengan LayoutBuilder, ConstrainedBox, dan passing data antar-halaman.',
   ),
   TaskItem(
-    title: 'Review normalisasi',
-    course: 'Basis Data',
-    deadline: 'Senin, 09.00',
-    description: 'Pelajari kembali bentuk normal dan contoh dependensi.',
+    id: 'T02',
+    title: 'Analisis Dataset Klasifikasi Sinyal ECG',
+    course: 'Biomedical Systems',
+    deadline: 'Jumat, 17:00 WIB',
+    priority: 'Sedang',
+    description:
+        'Melakukan ekstraksi fitur dasar dan visualisasi gelombang detak jantung menggunakan Python.',
+  ),
+  TaskItem(
+    id: 'T03',
+    title: 'Konfigurasi Static & Dynamic Routing OSPF',
+    course: 'Routing Protocols',
+    deadline: 'Senin Depan, 12:00 WIB',
+    priority: 'Rendah',
+    description:
+        'Simulasi topologi tiga router dan pengujian konektivitas antar-subnet.',
   ),
 ];
 
-const sampleSchedules = <ScheduleItem>[
+const List<ScheduleItem> sampleSchedules = [
   ScheduleItem(
-    course: 'Mobile Programming',
-    time: '08.00–09.40',
-    room: 'Lab Komputasi',
-    lecturer: 'Dosen Pengampu',
+    id: 'S01',
+    courseName: 'Mobile Programming',
+    day: 'Senin',
+    time: '08:00 - 10:30 WIB',
+    room: 'Lab Rekayasa Perangkat Lunak',
+    lecturer: 'Dosen Pengampu Mobile Programming',
+    credits: 3,
   ),
   ScheduleItem(
-    course: 'Basis Data',
-    time: '10.00–11.40',
-    room: 'Ruang 302',
-    lecturer: 'Dosen Pengampu',
+    id: 'S02',
+    courseName: 'Data Science',
+    day: 'Rabu',
+    time: '10:30 - 13:00 WIB',
+    room: 'Gedung FTI Ruang 302',
+    lecturer: 'Dosen Pengampu Data Science',
+    credits: 3,
+  ),
+  ScheduleItem(
+    id: 'S03',
+    courseName: 'Internet of Things (IoT)',
+    day: 'Kamis',
+    time: '13:00 - 15:30 WIB',
+    room: 'Lab Sistem Tertanam',
+    lecturer: 'Dosen Pengampu IoT',
+    credits: 3,
   ),
 ];
